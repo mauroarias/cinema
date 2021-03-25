@@ -1,13 +1,13 @@
-package com.example.entrevueSpringBoot;
+package com.example.cinema;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EntrevueSpringBootApplication {
+public class CinemaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EntrevueSpringBootApplication.class, args);
+		SpringApplication.run(CinemaApplication.class, args);
 	}
 
 }

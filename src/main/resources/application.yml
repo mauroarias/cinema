@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:cinema
     driver-class-name: org.h2.Driver
     username: sa
     password:
@@ -9,3 +9,26 @@ spring:
   h2:
     console:
       enabled: true
+
+server:
+  port: 8080
+
+management:
+  server:
+    port: 8888
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+info:
+  app:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    baseUri: http://localhost:${server.port}
+
+logging:
+  level:
+    com:
+      example: DEBUG

@@ -131,9 +131,29 @@ http://localhost:8080/api/film --header "Content-Type:application/json"
 Vous pouvez utiliser la collection postman incluse dans le projet si vous désirez valider votre API avec des assertions.  
 Celle-ci se retrouve dans le dossier **postman** du projet.
 
-## Soumettre le test
 
-Une fois terminé, veuillez créer un nouveau dépot sur GitHub et l'envoyer par courriel.
+## How to build
 
-Bonne chance!
+```
+mvn clean package
+```
 
+## How to build a docker container
+
+```
+docker build -t test:latest .
+```
+
+## How to run
+
+```
+docker run -p8080:8080 -it test:latest 
+```
+
+## How to access to swagger
+
+```
+http://localhost:8080/swagger-ui.html
+```
+
+or click [here](http://localhost:8080/swagger-ui.html)
